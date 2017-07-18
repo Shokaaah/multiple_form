@@ -1,6 +1,5 @@
 window.onload =function(){
     counter = 0;
-    // counter = Number($("[name=extra_field_count]").val());
     document.getElementById("add-button").onclick = function() {
         counter++;
         var objTo = document.getElementById('myForm');
