@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Multiple Form</title>
+    {% load static from staticfiles %}
+        <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" type="text/css">
+{#	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
+    <script src="{% static "js/jquery-1.11.1.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left_menu">
+            <input type="button" id="add-button" class="btn-primary btn-lg" value="Add">
+            <br/>
+            <br/>
+            <input type="button" id="submit-button" class="btn-success btn-lg" value='Submit'>
+        </div>
+        <div class="body">
+            <form name="myForm" id="myForm" method="POST">
+		        <div id="form_fields">
+			        {% csrf_token %}
+			        {{ form.as_p }}
+		        </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

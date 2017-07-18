@@ -1,0 +1,22 @@
+.wrapper{
+    width: 100%;
+    margin: 0 auto; /* центрирование*/
+}
+
+.wrapper .body{
+    width: 660px;
+    margin-left: 40px;
+    min-height: 600px;
+    display: inline-block;
+    vertical-align: top;
+}
+.wrapper .left_menu{
+    width: 150px;
+    margin-left: 100px;
+    min-height: 600px;
+    display: inline-block;
+    vertical-align: top;
+}
+.wrapper .left_menu .btn-lg{
+    width: 100%;
+}
